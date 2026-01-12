@@ -1,0 +1,5793 @@
+{
+  "database_info": {
+    "name": "default_database_V01",
+    "version": "1.0",
+    "description": "This is the initial test database",
+    "created_by": "User",
+    "created_date": "2025-08-15T16:19:32.011249",
+    "last_modified": "2025-09-12T16:27:04.244390"
+  },
+  "entities": {
+    "unenveloped virion": {
+      "name": "unenveloped virion",
+      "description": "Basic Virion without a plasma membrane",
+      "base_degradation_rate": 0.08,
+      "location": "extracellular",
+      "entity_class": "virion",
+      "is_starter": true
+    },
+    "enveloped virion": {
+      "name": "enveloped virion",
+      "description": "Basic virion with a plasma membrane. Will degrade faster.",
+      "base_degradation_rate": 0.12,
+      "location": "extracellular",
+      "entity_class": "virion",
+      "is_starter": true
+    },
+    "virion in endosome": {
+      "name": "virion in endosome",
+      "description": "",
+      "base_degradation_rate": 0.2,
+      "location": "endosome",
+      "entity_class": "virion",
+      "is_starter": false
+    },
+    "Polyprotein": {
+      "name": "Polyprotein",
+      "description": "",
+      "base_degradation_rate": 0.1,
+      "location": "cytoplasm",
+      "entity_class": "protein",
+      "is_starter": false
+    },
+    "Protease": {
+      "name": "Protease",
+      "description": "",
+      "base_degradation_rate": 0.1,
+      "location": "cytoplasm",
+      "entity_class": "protein",
+      "is_starter": false
+    },
+    "RNA-dep RNA-polymerase": {
+      "name": "RNA-dep RNA-polymerase",
+      "description": "",
+      "base_degradation_rate": 0.1,
+      "location": "cytoplasm",
+      "entity_class": "protein",
+      "is_starter": false
+    },
+    "structural proteins": {
+      "name": "structural proteins",
+      "description": "",
+      "base_degradation_rate": 0.15,
+      "location": "cytoplasm",
+      "entity_class": "protein",
+      "is_starter": false
+    },
+    "assembled virion": {
+      "name": "assembled virion",
+      "description": "",
+      "base_degradation_rate": 0.1,
+      "location": "cytoplasm",
+      "entity_class": "complex",
+      "is_starter": false
+    },
+    "virion bound to membrane": {
+      "name": "virion bound to membrane",
+      "description": "",
+      "base_degradation_rate": 0.1,
+      "location": "membrane",
+      "entity_class": "virion",
+      "is_starter": false
+    },
+    "virion precursor": {
+      "name": "virion precursor",
+      "description": "",
+      "base_degradation_rate": 0.2,
+      "location": "cytoplasm",
+      "entity_class": "virion",
+      "is_starter": false
+    },
+    "sub-genomic RNA": {
+      "name": "sub-genomic RNA",
+      "description": "",
+      "base_degradation_rate": 0.25,
+      "location": "cytoplasm",
+      "entity_class": "RNA",
+      "is_starter": false
+    },
+    "exported virion": {
+      "name": "exported virion",
+      "description": "",
+      "base_degradation_rate": 0.05,
+      "location": "extracellular",
+      "entity_class": "complex",
+      "is_starter": false
+    },
+    "unenveloped virion (extracellular)": {
+      "name": "unenveloped virion (extracellular)",
+      "description": "Basic viral particle outside the cell",
+      "base_degradation_rate": 0.05,
+      "location": "extracellular",
+      "entity_class": "virion",
+      "is_starter": true
+    },
+    "structural proteins in golgi": {
+      "name": "structural proteins in golgi",
+      "description": "",
+      "base_degradation_rate": 0.15,
+      "location": "cytoplasm",
+      "entity_class": "protein",
+      "is_starter": false
+    },
+    "virion in cytoplasm": {
+      "name": "virion in cytoplasm",
+      "description": "",
+      "base_degradation_rate": 0.2,
+      "location": "cytoplasm",
+      "entity_class": "virion",
+      "is_starter": false
+    },
+    "dsDNA in nucleus": {
+      "name": "dsDNA in nucleus",
+      "description": "",
+      "base_degradation_rate": 0.08,
+      "location": "nucleus",
+      "entity_class": "DNA",
+      "is_starter": false
+    },
+    "Provirus - chromosomal DNA": {
+      "name": "Provirus - chromosomal DNA",
+      "description": "",
+      "base_degradation_rate": 0.01,
+      "location": "nucleus",
+      "entity_class": "DNA",
+      "is_starter": false
+    },
+    "Integrase in nucleus": {
+      "name": "Integrase in nucleus",
+      "description": "",
+      "base_degradation_rate": 0.1,
+      "location": "nucleus",
+      "entity_class": "protein",
+      "is_starter": false
+    },
+    "spliced mRNA in nucleus": {
+      "name": "spliced mRNA in nucleus",
+      "description": "",
+      "base_degradation_rate": 0.15,
+      "location": "nucleus",
+      "entity_class": "RNA",
+      "is_starter": false
+    },
+    "negative-sense ssRNA": {
+      "name": "negative-sense ssRNA",
+      "description": "",
+      "base_degradation_rate": 0.25,
+      "location": "cytoplasm",
+      "entity_class": "RNA",
+      "is_starter": false
+    },
+    "positive-sense ssRNA": {
+      "name": "positive-sense ssRNA",
+      "description": "",
+      "base_degradation_rate": 0.25,
+      "location": "cytoplasm",
+      "entity_class": "RNA",
+      "is_starter": false
+    },
+    "Replication co-factors": {
+      "name": "Replication co-factors",
+      "description": "",
+      "base_degradation_rate": 0.15,
+      "location": "cytoplasm",
+      "entity_class": "protein",
+      "is_starter": false
+    },
+    "Viral genome complex": {
+      "name": "Viral genome complex",
+      "description": "",
+      "base_degradation_rate": 0.1,
+      "location": "cytoplasm",
+      "entity_class": "virion",
+      "is_starter": false
+    },
+    "Viral genome complex (nucleus)": {
+      "name": "Viral genome complex (nucleus)",
+      "description": "",
+      "base_degradation_rate": 0.1,
+      "location": "nucleus",
+      "entity_class": "virion",
+      "is_starter": false
+    },
+    "RNA-dep RNA-polymerase (nucleus)": {
+      "name": "RNA-dep RNA-polymerase (nucleus)",
+      "description": "",
+      "base_degradation_rate": 0.1,
+      "location": "nucleus",
+      "entity_class": "protein",
+      "is_starter": false
+    },
+    "negative-sense ssRNA (nucleus)": {
+      "name": "negative-sense ssRNA (nucleus)",
+      "description": "",
+      "base_degradation_rate": 0.15,
+      "location": "nucleus",
+      "entity_class": "RNA",
+      "is_starter": false
+    },
+    "positive-sense ssRNA (nucleus)": {
+      "name": "positive-sense ssRNA (nucleus)",
+      "description": "",
+      "base_degradation_rate": 0.15,
+      "location": "nucleus",
+      "entity_class": "RNA",
+      "is_starter": false
+    },
+    "circular dsDNA": {
+      "name": "circular dsDNA",
+      "description": "",
+      "base_degradation_rate": 0.06,
+      "location": "nucleus",
+      "entity_class": "DNA",
+      "is_starter": false
+    },
+    "structural proteins in nucleus": {
+      "name": "structural proteins in nucleus",
+      "description": "",
+      "base_degradation_rate": 0.1,
+      "location": "nucleus",
+      "entity_class": "protein",
+      "is_starter": false
+    },
+    "Immature virion": {
+      "name": "Immature virion",
+      "description": "",
+      "base_degradation_rate": 0.08,
+      "location": "cytoplasm",
+      "entity_class": "virion",
+      "is_starter": false
+    },
+    "viral proteins in ER": {
+      "name": "viral proteins in ER",
+      "description": "",
+      "base_degradation_rate": 0.1,
+      "location": "cytoplasm",
+      "entity_class": "protein",
+      "is_starter": false
+    },
+    "surface proteins (membrane)": {
+      "name": "surface proteins (membrane)",
+      "description": "",
+      "base_degradation_rate": 0.15,
+      "location": "membrane",
+      "entity_class": "protein",
+      "is_starter": false
+    },
+    "Replication co-factors (nucleus)": {
+      "name": "Replication co-factors (nucleus)",
+      "description": "",
+      "base_degradation_rate": 0.1,
+      "location": "nucleus",
+      "entity_class": "protein",
+      "is_starter": false
+    },
+    "DNA-Polymerase": {
+      "name": "DNA-Polymerase",
+      "description": "",
+      "base_degradation_rate": 0.1,
+      "location": "cytoplasm",
+      "entity_class": "protein",
+      "is_starter": false
+    },
+    "DNA-Polymerase (nucleus)": {
+      "name": "DNA-Polymerase (nucleus)",
+      "description": "",
+      "base_degradation_rate": 0.1,
+      "location": "nucleus",
+      "entity_class": "protein",
+      "is_starter": false
+    }
+  },
+  "genes": {
+    "ENV - 3Dpol - RNA dep RNA-Polymerase": {
+      "name": "ENV - 3Dpol - RNA dep RNA-Polymerase",
+      "cost": 55,
+      "description": "Picornavirus RNA Polymerase. Copies your RNA.",
+      "effects": [
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Picorna-like RdRp activity (neg strand)",
+            "inputs": [
+              {
+                "entity": "RNA-dep RNA-polymerase",
+                "count": 1,
+                "consumed": false
+              },
+              {
+                "entity": "positive-sense ssRNA",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "negative-sense ssRNA",
+                "count": 1
+              }
+            ],
+            "probability": 0.33,
+            "rule_type": "per_entity",
+            "interferon_amount": 0.01
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Picorna-like RdRp activity (pos strand)",
+            "inputs": [
+              {
+                "entity": "RNA-dep RNA-polymerase",
+                "count": 1,
+                "consumed": false
+              },
+              {
+                "entity": "negative-sense ssRNA",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "positive-sense ssRNA",
+                "count": 1
+              }
+            ],
+            "probability": 0.33,
+            "rule_type": "per_entity",
+            "interferon_amount": 0.01
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "uncapped RNA synthesis (neg strand)",
+            "inputs": [
+              {
+                "entity": "RNA-dep RNA-polymerase",
+                "count": 1,
+                "consumed": false
+              },
+              {
+                "entity": "positive-sense ssRNA",
+                "count": 1,
+                "consumed": false
+              },
+              {
+                "entity": "Replication co-factors",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "negative-sense ssRNA",
+                "count": 1
+              }
+            ],
+            "probability": 0.5,
+            "rule_type": "per_entity",
+            "interferon_amount": 0.02
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "uncapped RNA synthesis (pos strand)",
+            "inputs": [
+              {
+                "entity": "RNA-dep RNA-polymerase",
+                "count": 1,
+                "consumed": false
+              },
+              {
+                "entity": "negative-sense ssRNA",
+                "count": 1,
+                "consumed": false
+              },
+              {
+                "entity": "Replication co-factors",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "positive-sense ssRNA",
+                "count": 1
+              }
+            ],
+            "probability": 0.5,
+            "rule_type": "per_entity",
+            "interferon_amount": 0.02
+          }
+        }
+      ],
+      "is_polymerase": true
+    },
+    "ENV - 3C Protease": {
+      "name": "ENV - 3C Protease",
+      "cost": 15,
+      "description": "Picornavirus Protease. Cleaves Polyproteins.",
+      "effects": [
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Polyprotein cleavage",
+            "inputs": [
+              {
+                "entity": "Protease",
+                "count": 1,
+                "consumed": true
+              },
+              {
+                "entity": "Polyprotein",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "RNA-dep RNA-polymerase",
+                "count": 1
+              },
+              {
+                "entity": "structural proteins",
+                "count": 1
+              }
+            ],
+            "probability": 0.6,
+            "rule_type": "per_entity"
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "MeV - F Fusion gylcoprotein": {
+      "name": "MeV - F Fusion gylcoprotein",
+      "cost": 20,
+      "description": "Measles virus fusion protein fuses a bound virion with the plasmamembrane.",
+      "effects": [
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "F protein mediated fusion",
+            "inputs": [
+              {
+                "entity": "virion bound to membrane",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "Viral genome complex",
+                "count": 1
+              }
+            ],
+            "probability": 0.7,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Export of new virions",
+            "inputs": [
+              {
+                "entity": "Immature virion",
+                "count": 1,
+                "consumed": true
+              },
+              {
+                "entity": "surface proteins (membrane)",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "exported virion",
+                "count": 1
+              }
+            ],
+            "probability": 0.6,
+            "rule_type": "per_entity",
+            "interferon_amount": 0.01
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Reinfection cycle",
+            "inputs": [
+              {
+                "entity": "exported virion",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "enveloped virion",
+                "count": 1
+              }
+            ],
+            "probability": 1.0,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Transport of surface proteins to membrane",
+            "inputs": [
+              {
+                "entity": "viral proteins in ER",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "surface proteins (membrane)",
+                "count": 1
+              }
+            ],
+            "probability": 0.7,
+            "rule_type": "per_entity"
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "MeV - L RNA dep RNA-polymerase": {
+      "name": "MeV - L RNA dep RNA-polymerase",
+      "cost": 55,
+      "description": "The Paramyxovirus RNA polymerase. Copies your RNA... Requires a replication co-factor! In nature, this is the P protein.",
+      "effects": [
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Mononeg RdRp activity (pos strand)",
+            "inputs": [
+              {
+                "entity": "negative-sense ssRNA",
+                "count": 1,
+                "consumed": false
+              },
+              {
+                "entity": "RNA-dep RNA-polymerase",
+                "count": 1,
+                "consumed": false
+              },
+              {
+                "entity": "Replication co-factors",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "positive-sense ssRNA",
+                "count": 1
+              }
+            ],
+            "probability": 0.9,
+            "rule_type": "per_entity",
+            "interferon_amount": 0.01
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Mononeg RdRp activity (neg strand)",
+            "inputs": [
+              {
+                "entity": "positive-sense ssRNA",
+                "count": 1,
+                "consumed": false
+              },
+              {
+                "entity": "RNA-dep RNA-polymerase",
+                "count": 1,
+                "consumed": false
+              },
+              {
+                "entity": "Replication co-factors",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "negative-sense ssRNA",
+                "count": 1
+              }
+            ],
+            "probability": 0.9,
+            "rule_type": "per_entity",
+            "interferon_amount": 0.01
+          }
+        }
+      ],
+      "is_polymerase": true
+    },
+    "MeV - H Hemagglutinin": {
+      "name": "MeV - H Hemagglutinin",
+      "cost": 10,
+      "description": "The measles virus hemaglutinin binds to SLAMF1 CD150 receptor.",
+      "effects": [
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "hemagglutinin mediated binding",
+            "inputs": [
+              {
+                "entity": "enveloped virion",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "virion bound to membrane",
+                "count": 1
+              }
+            ],
+            "probability": 0.45,
+            "rule_type": "per_entity"
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "CoV - N nucleoprotein": {
+      "name": "CoV - N nucleoprotein",
+      "cost": 25,
+      "description": "Unpacks the incoming genome into positive-sense RNA and assembles new virions when RNA and proteins are present.",
+      "effects": [
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Unpacking in cytoplasm",
+            "inputs": [
+              {
+                "entity": "Viral genome complex",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "positive-sense ssRNA",
+                "count": 1
+              }
+            ],
+            "probability": 0.6,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Assembly of new virions",
+            "inputs": [
+              {
+                "entity": "positive-sense ssRNA",
+                "count": 1,
+                "consumed": true
+              },
+              {
+                "entity": "viral proteins in ER",
+                "count": 1,
+                "consumed": true
+              },
+              {
+                "entity": "structural proteins",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "Immature virion",
+                "count": 1
+              }
+            ],
+            "probability": 0.33,
+            "rule_type": "per_entity"
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "CoV - S glycoprotein": {
+      "name": "CoV - S glycoprotein",
+      "cost": 20,
+      "description": "Spike protein that binds ACE2, mediates attachment and entry, and initiates plus-strand RNA virus life cycle. S2 domain greatly increases membrane fusion when installed.",
+      "effects": [
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "ACE2 receptor binding",
+            "inputs": [
+              {
+                "entity": "enveloped virion",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "virion bound to membrane",
+                "count": 1
+              }
+            ],
+            "probability": 0.5,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "TMPRSS2 mediated entry",
+            "inputs": [
+              {
+                "entity": "virion bound to membrane",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "Viral genome complex",
+                "count": 1
+              }
+            ],
+            "probability": 0.2,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Export of new virions",
+            "inputs": [
+              {
+                "entity": "Immature virion",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "exported virion",
+                "count": 1
+              }
+            ],
+            "probability": 0.5,
+            "rule_type": "per_entity",
+            "interferon_amount": 0.01
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Reinfection cycle",
+            "inputs": [
+              {
+                "entity": "exported virion",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "enveloped virion",
+                "count": 1
+              }
+            ],
+            "probability": 1.0,
+            "rule_type": "per_entity"
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "CoV - S2 domain - membrane fusion": {
+      "name": "CoV - S2 domain - membrane fusion",
+      "cost": 10,
+      "description": "Important for entry. Requires S glycoprotein.",
+      "effects": [
+        {
+          "type": "modify_transition",
+          "rule_name": "TMPRSS2 mediated entry",
+          "modification": {
+            "probability_multiplier": 3.0
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "ENV - VP1-VP4": {
+      "name": "ENV - VP1-VP4",
+      "cost": 35,
+      "description": "Viral capsid proteins from the Picornavirus family. Provides a plus-strand RNA virus backbone",
+      "effects": [
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Receptor binding and attachment",
+            "inputs": [
+              {
+                "entity": "unenveloped virion",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "virion bound to membrane",
+                "count": 1
+              }
+            ],
+            "probability": 0.4,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Assembly of new virions",
+            "inputs": [
+              {
+                "entity": "positive-sense ssRNA",
+                "count": 1,
+                "consumed": true
+              },
+              {
+                "entity": "structural proteins",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "Immature virion",
+                "count": 1
+              }
+            ],
+            "probability": 0.33,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Lytic release of virions",
+            "inputs": [
+              {
+                "entity": "Immature virion",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "exported virion",
+                "count": 1
+              }
+            ],
+            "probability": 0.33,
+            "rule_type": "per_entity",
+            "interferon_amount": 0.05
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Reinfection cycle",
+            "inputs": [
+              {
+                "entity": "exported virion",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "unenveloped virion",
+                "count": 1
+              }
+            ],
+            "probability": 1.0,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Entry into endosome",
+            "inputs": [
+              {
+                "entity": "virion bound to membrane",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "virion in endosome",
+                "count": 1
+              }
+            ],
+            "probability": 0.6,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Genome injection into cytoplasm",
+            "inputs": [
+              {
+                "entity": "virion in endosome",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "positive-sense ssRNA",
+                "count": 1
+              }
+            ],
+            "probability": 0.8,
+            "rule_type": "per_entity"
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "CoV - nsp12 RdRP": {
+      "name": "CoV - nsp12 RdRP",
+      "cost": 50,
+      "description": "RNA polymerase that replicates positive- and negative-sense RNA and produces sub-genomic RNA for protein synthesis.",
+      "effects": [
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Picorna-like RdRp activity (neg strand)",
+            "inputs": [
+              {
+                "entity": "RNA-dep RNA-polymerase",
+                "count": 1,
+                "consumed": false
+              },
+              {
+                "entity": "positive-sense ssRNA",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "negative-sense ssRNA",
+                "count": 1
+              }
+            ],
+            "probability": 0.75,
+            "rule_type": "per_entity",
+            "interferon_amount": 0.01
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Picorna-like RdRp activity (pos strand)",
+            "inputs": [
+              {
+                "entity": "RNA-dep RNA-polymerase",
+                "count": 1,
+                "consumed": false
+              },
+              {
+                "entity": "negative-sense ssRNA",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "positive-sense ssRNA",
+                "count": 1
+              }
+            ],
+            "probability": 0.75,
+            "rule_type": "per_entity",
+            "interferon_amount": 0.01
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Picorna-like RdRp synthesis of sub-genomic RNA",
+            "inputs": [
+              {
+                "entity": "RNA-dep RNA-polymerase",
+                "count": 1,
+                "consumed": false
+              },
+              {
+                "entity": "negative-sense ssRNA",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "sub-genomic RNA",
+                "count": 1
+              }
+            ],
+            "probability": 0.6,
+            "rule_type": "per_entity",
+            "interferon_amount": 0.01
+          }
+        }
+      ],
+      "is_polymerase": true
+    },
+    "CoV - nsp5 Mpro": {
+      "name": "CoV - nsp5 Mpro",
+      "cost": 10,
+      "description": "Main protease that cleaves the polyprotein to release RNA-dependent RNA polymerase.",
+      "effects": [
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Polyprotein cleavage",
+            "inputs": [
+              {
+                "entity": "Protease",
+                "count": 1,
+                "consumed": true
+              },
+              {
+                "entity": "Polyprotein",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "RNA-dep RNA-polymerase",
+                "count": 1
+              }
+            ],
+            "probability": 0.75,
+            "rule_type": "per_entity"
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "LV - env gene - gp120 gp41": {
+      "name": "LV - env gene - gp120 gp41",
+      "cost": 25,
+      "description": "Lentiviral glycoproteins. Mediate release of capsid into the cytoplasm. Also allow formation of new lentiviral virions",
+      "effects": [
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "gp120 mediated binding",
+            "inputs": [
+              {
+                "entity": "enveloped virion",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "virion bound to membrane",
+                "count": 1
+              }
+            ],
+            "probability": 0.45,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "gp41 mediated fusion",
+            "inputs": [
+              {
+                "entity": "virion bound to membrane",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "Viral genome complex",
+                "count": 1
+              }
+            ],
+            "probability": 0.75,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Export of new virions",
+            "inputs": [
+              {
+                "entity": "Immature virion",
+                "count": 1,
+                "consumed": true
+              },
+              {
+                "entity": "Protease",
+                "count": 1,
+                "consumed": true
+              },
+              {
+                "entity": "surface proteins (membrane)",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "exported virion",
+                "count": 1
+              }
+            ],
+            "probability": 0.5,
+            "rule_type": "per_entity",
+            "interferon_amount": 0.01
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Reinfection cycle",
+            "inputs": [
+              {
+                "entity": "exported virion",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "enveloped virion",
+                "count": 1
+              }
+            ],
+            "probability": 1.0,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Transport of surface proteins to membrane",
+            "inputs": [
+              {
+                "entity": "viral proteins in ER",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "surface proteins (membrane)",
+                "count": 1
+              }
+            ],
+            "probability": 0.7,
+            "rule_type": "per_entity"
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "LV - gag gene": {
+      "name": "LV - gag gene",
+      "cost": 40,
+      "description": "These are the structural proteins of the lentiviruses. Mediate nuclear import of capsid contents",
+      "effects": [
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "gag mediated nucleus import and release",
+            "inputs": [
+              {
+                "entity": "Viral genome complex",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "dsDNA in nucleus",
+                "count": 1
+              },
+              {
+                "entity": "Integrase in nucleus",
+                "count": 1
+              }
+            ],
+            "probability": 0.5,
+            "rule_type": "per_entity",
+            "interferon_amount": 0.01
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Assembly of new virions",
+            "inputs": [
+              {
+                "entity": "positive-sense ssRNA",
+                "count": 1,
+                "consumed": true
+              },
+              {
+                "entity": "Polyprotein",
+                "count": 1,
+                "consumed": true
+              },
+              {
+                "entity": "structural proteins",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "Immature virion",
+                "count": 1
+              }
+            ],
+            "probability": 0.3,
+            "rule_type": "per_entity"
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "LV - pol gene": {
+      "name": "LV - pol gene",
+      "cost": 30,
+      "description": "contains the RT and integrase of lentiviruses.",
+      "effects": [
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "pol Integrase activity",
+            "inputs": [
+              {
+                "entity": "Integrase in nucleus",
+                "count": 1,
+                "consumed": true
+              },
+              {
+                "entity": "dsDNA in nucleus",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "Provirus - chromosomal DNA",
+                "count": 1
+              }
+            ],
+            "probability": 0.1,
+            "rule_type": "per_entity"
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "ENV - VPg": {
+      "name": "ENV - VPg",
+      "cost": 15,
+      "description": "Picornavirus Replication co-factor. Positive-sense ssRNA can produce replication co-factor",
+      "effects": [
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Translation of co-factor",
+            "inputs": [
+              {
+                "entity": "positive-sense ssRNA",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "Replication co-factors",
+                "count": 1
+              }
+            ],
+            "probability": 0.4,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "modify_transition",
+          "rule_name": "uncapped RNA synthesis (pos strand)",
+          "modification": {
+            "probability_multiplier": 1.5
+          }
+        },
+        {
+          "type": "modify_transition",
+          "rule_name": "uncapped RNA synthesis (neg strand)",
+          "modification": {
+            "probability_multiplier": 1.5
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "MeV - P phosphoprotein": {
+      "name": "MeV - P phosphoprotein",
+      "cost": 15,
+      "description": "P phosphoprotein acts as the Co-factor for the L Polymerase. Ingame produces generic Replication co-factors.",
+      "effects": [
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Translation of co-factor P",
+            "inputs": [
+              {
+                "entity": "positive-sense ssRNA",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "Replication co-factors",
+                "count": 1
+              }
+            ],
+            "probability": 0.75,
+            "rule_type": "per_entity"
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "CoV - backbone": {
+      "name": "CoV - backbone",
+      "cost": 50,
+      "description": "Translates viral RNA to produce polyprotein and protease. Also translates sub-genomic RNA into structural proteins and ER-targeted proteins.",
+      "effects": [
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Translation of viral RNA",
+            "inputs": [
+              {
+                "entity": "positive-sense ssRNA",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "Polyprotein",
+                "count": 1
+              },
+              {
+                "entity": "Protease",
+                "count": 1
+              }
+            ],
+            "probability": 0.6,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Translation of sub-genomic RNA",
+            "inputs": [
+              {
+                "entity": "sub-genomic RNA",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "viral proteins in ER",
+                "count": 1
+              },
+              {
+                "entity": "structural proteins",
+                "count": 1
+              }
+            ],
+            "probability": 0.6,
+            "rule_type": "per_entity"
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "ENV - 5-UTR": {
+      "name": "ENV - 5-UTR",
+      "cost": 15,
+      "description": "RNA virus 5-UTR improves replication",
+      "effects": [
+        {
+          "type": "modify_transition",
+          "rule_name": "Picorna-like RdRp activity (neg strand)",
+          "modification": {
+            "probability_multiplier": 1.25,
+            "interferon_multiplier": 1.1
+          }
+        },
+        {
+          "type": "modify_transition",
+          "rule_name": "Picorna-like RdRp activity (pos strand)",
+          "modification": {
+            "probability_multiplier": 1.25,
+            "interferon_multiplier": 1.1
+          }
+        },
+        {
+          "type": "modify_transition",
+          "rule_name": "uncapped RNA synthesis (pos strand)",
+          "modification": {
+            "probability_multiplier": 1.5
+          }
+        },
+        {
+          "type": "modify_transition",
+          "rule_name": "uncapped RNA synthesis (neg strand)",
+          "modification": {
+            "probability_multiplier": 1.5
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "ENV - backbone": {
+      "name": "ENV - backbone",
+      "cost": 40,
+      "description": "Genomic backbone of a Picornavirus. Allows pore formation and injection of viral RNA from membrane bound virions. Positive sense ssRNA produces Polyprotein and Protease.",
+      "effects": [
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Translation of viral RNA",
+            "inputs": [
+              {
+                "entity": "positive-sense ssRNA",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "Polyprotein",
+                "count": 1
+              },
+              {
+                "entity": "Protease",
+                "count": 1
+              }
+            ],
+            "probability": 0.5,
+            "rule_type": "per_entity"
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "LV - backbone": {
+      "name": "LV - backbone",
+      "cost": 40,
+      "description": "Lentivirus backbone. Includes transcription, mRNA export and translation",
+      "effects": [
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Transcription of proviral DNA",
+            "inputs": [
+              {
+                "entity": "Provirus - chromosomal DNA",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "spliced mRNA in nucleus",
+                "count": 1
+              }
+            ],
+            "probability": 0.3,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Export of mRNA",
+            "inputs": [
+              {
+                "entity": "spliced mRNA in nucleus",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "positive-sense ssRNA",
+                "count": 1
+              }
+            ],
+            "probability": 0.75,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Translation of viral mRNA",
+            "inputs": [
+              {
+                "entity": "positive-sense ssRNA",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "structural proteins",
+                "count": 1
+              },
+              {
+                "entity": "Polyprotein",
+                "count": 1
+              },
+              {
+                "entity": "Protease",
+                "count": 1
+              }
+            ],
+            "probability": 0.6,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Translation of mRNA for ER",
+            "inputs": [
+              {
+                "entity": "positive-sense ssRNA",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "viral proteins in ER",
+                "count": 1
+              }
+            ],
+            "probability": 0.6,
+            "rule_type": "per_entity"
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "MeV - backbone": {
+      "name": "MeV - backbone",
+      "cost": 45,
+      "description": "Genomic backbone of a Paramyxovirus. Allows translation of an RNA polymerase and structural proteins for ER.",
+      "effects": [
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Translation of viral RNA",
+            "inputs": [
+              {
+                "entity": "positive-sense ssRNA",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "RNA-dep RNA-polymerase",
+                "count": 1
+              },
+              {
+                "entity": "structural proteins",
+                "count": 1
+              }
+            ],
+            "probability": 0.6,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Translation of viral RNA for ER",
+            "inputs": [
+              {
+                "entity": "positive-sense ssRNA",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "viral proteins in ER",
+                "count": 1
+              }
+            ],
+            "probability": 0.6,
+            "rule_type": "per_entity"
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "X - RNA virus translation enhancer": {
+      "name": "X - RNA virus translation enhancer",
+      "cost": 10,
+      "description": "",
+      "effects": [
+        {
+          "type": "modify_transition",
+          "rule_name": "Translation of viral RNA",
+          "modification": {
+            "probability_multiplier": 2.0
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "LV - Tat gene": {
+      "name": "LV - Tat gene",
+      "cost": 10,
+      "description": "Greatly enhances transcription effeciency of proviral DNA",
+      "effects": [
+        {
+          "type": "modify_transition",
+          "rule_name": "Transcription of proviral DNA",
+          "modification": {
+            "probability_multiplier": 2.0
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "LV - Rev gene": {
+      "name": "LV - Rev gene",
+      "cost": 10,
+      "description": "Improves export of viral mRNAs out of the nucleus",
+      "effects": [
+        {
+          "type": "modify_transition",
+          "rule_name": "Export of mRNA",
+          "modification": {
+            "probability_multiplier": 2.0
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "INF - NP nucleoprotein": {
+      "name": "INF - NP nucleoprotein",
+      "cost": 15,
+      "description": "Transports the RNP to the nucleus. Also exports RNA from the nucleus",
+      "effects": [
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "NP nuclear localization signal",
+            "inputs": [
+              {
+                "entity": "Viral genome complex",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "Viral genome complex (nucleus)",
+                "count": 1
+              }
+            ],
+            "probability": 0.75,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Unpacking in nucleus",
+            "inputs": [
+              {
+                "entity": "Viral genome complex (nucleus)",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "negative-sense ssRNA (nucleus)",
+                "count": 8
+              },
+              {
+                "entity": "RNA-dep RNA-polymerase (nucleus)",
+                "count": 8
+              }
+            ],
+            "probability": 0.8,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Assembly of new virions",
+            "inputs": [
+              {
+                "entity": "negative-sense ssRNA (nucleus)",
+                "count": 8,
+                "consumed": true
+              },
+              {
+                "entity": "RNA-dep RNA-polymerase (nucleus)",
+                "count": 8,
+                "consumed": true
+              },
+              {
+                "entity": "structural proteins in nucleus",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "Immature virion",
+                "count": 1
+              }
+            ],
+            "probability": 0.35,
+            "rule_type": "per_entity",
+            "interferon_amount": 0.01
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Import of structural proteins into nucleus",
+            "inputs": [
+              {
+                "entity": "structural proteins",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "structural proteins in nucleus",
+                "count": 1
+              }
+            ],
+            "probability": 0.66,
+            "rule_type": "per_entity"
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "INF - backbone": {
+      "name": "INF - backbone",
+      "cost": 50,
+      "description": "Provides an Influenzavirus genomic backbone. Transcribes viral RNA.",
+      "effects": [
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Translation of viral RNA",
+            "inputs": [
+              {
+                "entity": "positive-sense ssRNA",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "structural proteins",
+                "count": 1
+              },
+              {
+                "entity": "RNA-dep RNA-polymerase",
+                "count": 1
+              }
+            ],
+            "probability": 0.6,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Translation of viral RNA for ER",
+            "inputs": [
+              {
+                "entity": "positive-sense ssRNA",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "viral proteins in ER",
+                "count": 1
+              }
+            ],
+            "probability": 0.61,
+            "rule_type": "per_entity"
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "INF - PB1 PB2 PA polymerase complex": {
+      "name": "INF - PB1 PB2 PA polymerase complex",
+      "cost": 45,
+      "description": "Has a nuclear localization signal",
+      "effects": [
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Import into the nucleus",
+            "inputs": [
+              {
+                "entity": "RNA-dep RNA-polymerase",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "RNA-dep RNA-polymerase (nucleus)",
+                "count": 1
+              }
+            ],
+            "probability": 0.8,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Seg-type RdRp activity (pos strand)",
+            "inputs": [
+              {
+                "entity": "negative-sense ssRNA (nucleus)",
+                "count": 1,
+                "consumed": false
+              },
+              {
+                "entity": "RNA-dep RNA-polymerase (nucleus)",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "positive-sense ssRNA (nucleus)",
+                "count": 1
+              }
+            ],
+            "probability": 0.6,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Seg-type RdRp activity (neg strand)",
+            "inputs": [
+              {
+                "entity": "positive-sense ssRNA (nucleus)",
+                "count": 1,
+                "consumed": false
+              },
+              {
+                "entity": "RNA-dep RNA-polymerase (nucleus)",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "negative-sense ssRNA (nucleus)",
+                "count": 1
+              }
+            ],
+            "probability": 0.6,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Export of modified positive sense RNA",
+            "inputs": [
+              {
+                "entity": "positive-sense ssRNA (nucleus)",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "positive-sense ssRNA",
+                "count": 1
+              }
+            ],
+            "probability": 0.3,
+            "rule_type": "per_entity"
+          }
+        }
+      ],
+      "is_polymerase": true
+    },
+    "INF - NA neuraminidase": {
+      "name": "INF - NA neuraminidase",
+      "cost": 10,
+      "description": "Required for release of virions in Influenza",
+      "effects": [
+        {
+          "type": "modify_transition",
+          "rule_name": "Export of new virions",
+          "modification": {
+            "probability_multiplier": 7.0,
+            "interferon_multiplier": 1.2
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "BKV - VP1": {
+      "name": "BKV - VP1",
+      "cost": 25,
+      "description": "Major capsid protein that binds ganglioside receptors. Enables binding to membrane and internalization into endosomes.",
+      "effects": [
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "VP1 mediated endocytosis",
+            "inputs": [
+              {
+                "entity": "virion bound to membrane",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "virion in endosome",
+                "count": 1
+              }
+            ],
+            "probability": 0.75,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Import of capsid proteins into nucleus",
+            "inputs": [
+              {
+                "entity": "structural proteins",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "structural proteins in nucleus",
+                "count": 1
+              }
+            ],
+            "probability": 0.75,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Assembly of new virions",
+            "inputs": [
+              {
+                "entity": "circular dsDNA",
+                "count": 1,
+                "consumed": true
+              },
+              {
+                "entity": "structural proteins in nucleus",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "Immature virion",
+                "count": 1
+              }
+            ],
+            "probability": 0.3,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Lytic release of virions",
+            "inputs": [
+              {
+                "entity": "Immature virion",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "exported virion",
+                "count": 1
+              }
+            ],
+            "probability": 0.33,
+            "rule_type": "per_entity",
+            "interferon_amount": 0.05
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Reinfection cycle",
+            "inputs": [
+              {
+                "entity": "exported virion",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "unenveloped virion",
+                "count": 1
+              }
+            ],
+            "probability": 1.0,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Unpacking in nucleus",
+            "inputs": [
+              {
+                "entity": "Viral genome complex (nucleus)",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "circular dsDNA",
+                "count": 1
+              }
+            ],
+            "probability": 0.8,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Binding to membrane",
+            "inputs": [
+              {
+                "entity": "unenveloped virion",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "virion bound to membrane",
+                "count": 1
+              }
+            ],
+            "probability": 0.4,
+            "rule_type": "per_entity"
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "BKV - VP2-VP3": {
+      "name": "BKV - VP2-VP3",
+      "cost": 10,
+      "description": "Minor capsid proteins that help uncoat the genome and deliver it to the nucleus. Enable endosomal escape and nuclear import of the viral genome.",
+      "effects": [
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "ER disassembly and escape",
+            "inputs": [
+              {
+                "entity": "virion in endosome",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "Viral genome complex",
+                "count": 1
+              }
+            ],
+            "probability": 0.75,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Transport to nuclear pore complex",
+            "inputs": [
+              {
+                "entity": "Viral genome complex",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "Viral genome complex (nucleus)",
+                "count": 1
+              }
+            ],
+            "probability": 0.8,
+            "rule_type": "per_entity"
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "BKV - backbone": {
+      "name": "BKV - backbone",
+      "cost": 50,
+      "description": "Circular dsDNA genome expressed by host RNA polymerase II. Enables transcription of early and late genes, export of viral mRNA, and translation of structural and nonstructural proteins.",
+      "effects": [
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Transcription of viral DNA",
+            "inputs": [
+              {
+                "entity": "circular dsDNA",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "spliced mRNA in nucleus",
+                "count": 1
+              }
+            ],
+            "probability": 0.33,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Export of viral mRNA",
+            "inputs": [
+              {
+                "entity": "spliced mRNA in nucleus",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "positive-sense ssRNA",
+                "count": 1
+              }
+            ],
+            "probability": 0.7,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Translation of viral mRNA",
+            "inputs": [
+              {
+                "entity": "positive-sense ssRNA",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "structural proteins",
+                "count": 1
+              }
+            ],
+            "probability": 0.6,
+            "rule_type": "per_entity"
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "BKV - large T": {
+      "name": "BKV - large T",
+      "cost": 40,
+      "description": "Large T antigen that initiates viral DNA replication and drives cell cycle progression. Provides helicase and replication functions in the nucleus.",
+      "effects": [
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "co-factor enabled replication of circular DNA",
+            "inputs": [
+              {
+                "entity": "circular dsDNA",
+                "count": 1,
+                "consumed": false
+              },
+              {
+                "entity": "Replication co-factors (nucleus)",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "circular dsDNA",
+                "count": 1
+              }
+            ],
+            "probability": 0.15,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Translation of Large T",
+            "inputs": [
+              {
+                "entity": "positive-sense ssRNA",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "Replication co-factors",
+                "count": 1
+              }
+            ],
+            "probability": 0.6,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Import of Large T into nucleus",
+            "inputs": [
+              {
+                "entity": "Replication co-factors",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "Replication co-factors (nucleus)",
+                "count": 1
+              }
+            ],
+            "probability": 0.8,
+            "rule_type": "per_entity"
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "BKV - small T": {
+      "name": "BKV - small T",
+      "cost": 10,
+      "description": "Small T antigen that modulates host signaling and enhances viral replication. Increases efficiency of DNA replication and transcription of late genes.",
+      "effects": [
+        {
+          "type": "modify_transition",
+          "rule_name": "co-factor enabled replication of circular DNA",
+          "modification": {
+            "probability_multiplier": 1.5
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "HPV - L1": {
+      "name": "HPV - L1",
+      "cost": 40,
+      "description": "",
+      "effects": [
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "HSPG binding",
+            "inputs": [
+              {
+                "entity": "unenveloped virion",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "virion bound to membrane",
+                "count": 1
+              }
+            ],
+            "probability": 0.3,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Import of capsid proteins into nucleus",
+            "inputs": [
+              {
+                "entity": "structural proteins",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "structural proteins in nucleus",
+                "count": 1
+              }
+            ],
+            "probability": 0.7,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Assembly of new virions",
+            "inputs": [
+              {
+                "entity": "circular dsDNA",
+                "count": 1,
+                "consumed": true
+              },
+              {
+                "entity": "structural proteins in nucleus",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "Immature virion",
+                "count": 1
+              }
+            ],
+            "probability": 0.33,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Release by shedding",
+            "inputs": [
+              {
+                "entity": "Immature virion",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "exported virion",
+                "count": 1
+              }
+            ],
+            "probability": 0.15,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Reinfection cycle",
+            "inputs": [
+              {
+                "entity": "exported virion",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "unenveloped virion",
+                "count": 1
+              }
+            ],
+            "probability": 1.0,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Unpacking in nucleus",
+            "inputs": [
+              {
+                "entity": "Viral genome complex (nucleus)",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "circular dsDNA",
+                "count": 1
+              }
+            ],
+            "probability": 0.75,
+            "rule_type": "per_entity"
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "HPV - L2": {
+      "name": "HPV - L2",
+      "cost": 10,
+      "description": "",
+      "effects": [
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Clathrin mediated endocytosis",
+            "inputs": [
+              {
+                "entity": "virion bound to membrane",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "virion in endosome",
+                "count": 1
+              }
+            ],
+            "probability": 0.75,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "L2 mediated uncoating",
+            "inputs": [
+              {
+                "entity": "virion in endosome",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "Viral genome complex",
+                "count": 1
+              }
+            ],
+            "probability": 0.7,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Entry into the nucleus",
+            "inputs": [
+              {
+                "entity": "Viral genome complex",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "Viral genome complex (nucleus)",
+                "count": 1
+              }
+            ],
+            "probability": 0.6,
+            "rule_type": "per_entity"
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "HPV - backbone": {
+      "name": "HPV - backbone",
+      "cost": 50,
+      "description": "Provides a HPV genomic backbone",
+      "effects": [
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Transcription of viral DNA",
+            "inputs": [
+              {
+                "entity": "circular dsDNA",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "spliced mRNA in nucleus",
+                "count": 1
+              }
+            ],
+            "probability": 0.6,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Export of viral mRNA",
+            "inputs": [
+              {
+                "entity": "spliced mRNA in nucleus",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "positive-sense ssRNA",
+                "count": 1
+              }
+            ],
+            "probability": 0.6,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Translation of viral mRNA",
+            "inputs": [
+              {
+                "entity": "positive-sense ssRNA",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "structural proteins",
+                "count": 1
+              }
+            ],
+            "probability": 0.6,
+            "rule_type": "per_entity"
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "HPV - E1": {
+      "name": "HPV - E1",
+      "cost": 40,
+      "description": "",
+      "effects": [
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "co-factor enabled replication of circular DNA",
+            "inputs": [
+              {
+                "entity": "circular dsDNA",
+                "count": 1,
+                "consumed": false
+              },
+              {
+                "entity": "Replication co-factors (nucleus)",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "circular dsDNA",
+                "count": 1
+              }
+            ],
+            "probability": 0.15,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Translation of E1",
+            "inputs": [
+              {
+                "entity": "positive-sense ssRNA",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "Replication co-factors",
+                "count": 1
+              }
+            ],
+            "probability": 0.75,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Transport of E1 to nucleus",
+            "inputs": [
+              {
+                "entity": "Replication co-factors",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "Replication co-factors (nucleus)",
+                "count": 1
+              }
+            ],
+            "probability": 0.8,
+            "rule_type": "per_entity"
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "HPV - E2": {
+      "name": "HPV - E2",
+      "cost": 10,
+      "description": "",
+      "effects": [
+        {
+          "type": "modify_transition",
+          "rule_name": "co-factor enabled replication of circular DNA",
+          "modification": {
+            "probability_multiplier": 1.5
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "HPV - E6 E7": {
+      "name": "HPV - E6 E7",
+      "cost": 20,
+      "description": "Pushes cells into S phase",
+      "effects": [
+        {
+          "type": "modify_transition",
+          "rule_name": "co-factor enabled replication of circular DNA",
+          "modification": {
+            "probability_multiplier": 2.0
+          }
+        },
+        {
+          "type": "modify_transition",
+          "rule_name": "DNA pol acitivity in nucleus",
+          "modification": {
+            "probability_multiplier": 1.25
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "MeV - N Nucleoprotein": {
+      "name": "MeV - N Nucleoprotein",
+      "cost": 20,
+      "description": "Paramyxovirus nucleocapsid. Packs a negative sense RNA genome with Polymerase and replication co-factor P.",
+      "effects": [
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Unpacking in cytoplasm",
+            "inputs": [
+              {
+                "entity": "Viral genome complex",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "negative-sense ssRNA",
+                "count": 1
+              },
+              {
+                "entity": "RNA-dep RNA-polymerase",
+                "count": 1
+              },
+              {
+                "entity": "Replication co-factors",
+                "count": 1
+              }
+            ],
+            "probability": 0.8,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "M mediated virion assembly",
+            "inputs": [
+              {
+                "entity": "RNA-dep RNA-polymerase",
+                "count": 1,
+                "consumed": true
+              },
+              {
+                "entity": "negative-sense ssRNA",
+                "count": 1,
+                "consumed": true
+              },
+              {
+                "entity": "structural proteins",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "Immature virion",
+                "count": 1
+              }
+            ],
+            "probability": 0.4,
+            "rule_type": "per_entity"
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "INF - HA hemaglutinin gene": {
+      "name": "INF - HA hemaglutinin gene",
+      "cost": 20,
+      "description": "The Influenzavirus HA gene enables binding to the plasmamembrane and subsequent endocytosis and membrane fusion.",
+      "effects": [
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "HA binds to sialic acid and mediates endocytosis",
+            "inputs": [
+              {
+                "entity": "virion bound to membrane",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "virion in endosome",
+                "count": 1
+              }
+            ],
+            "probability": 0.8,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "HA mediated fusion",
+            "inputs": [
+              {
+                "entity": "virion in endosome",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "Viral genome complex",
+                "count": 1
+              }
+            ],
+            "probability": 0.66,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Export of new virions",
+            "inputs": [
+              {
+                "entity": "Immature virion",
+                "count": 1,
+                "consumed": true
+              },
+              {
+                "entity": "surface proteins (membrane)",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "exported virion",
+                "count": 1
+              }
+            ],
+            "probability": 0.1,
+            "rule_type": "per_entity",
+            "interferon_amount": 0.01
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Reinfection cycle",
+            "inputs": [
+              {
+                "entity": "exported virion",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "enveloped virion",
+                "count": 1
+              }
+            ],
+            "probability": 1.0,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Transport of surface proteins to membrane",
+            "inputs": [
+              {
+                "entity": "viral proteins in ER",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "surface proteins (membrane)",
+                "count": 1
+              }
+            ],
+            "probability": 0.81,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Binding to membrane",
+            "inputs": [
+              {
+                "entity": "enveloped virion",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "virion bound to membrane",
+                "count": 1
+              }
+            ],
+            "probability": 0.4,
+            "rule_type": "per_entity"
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "RSV - G protein": {
+      "name": "RSV - G protein",
+      "cost": 15,
+      "description": "Attaches to molecules on the plasma membrane",
+      "effects": [
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Binding to membrane",
+            "inputs": [
+              {
+                "entity": "enveloped virion",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "virion bound to membrane",
+                "count": 1
+              }
+            ],
+            "probability": 0.45,
+            "rule_type": "per_entity"
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "RSV - F Fusion protein": {
+      "name": "RSV - F Fusion protein",
+      "cost": 15,
+      "description": "Normally in a metastable prefusion conformation. Mediates plasmamembran fusion",
+      "effects": [
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Fusion with the plasmamembrane",
+            "inputs": [
+              {
+                "entity": "virion bound to membrane",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "Viral genome complex",
+                "count": 1
+              }
+            ],
+            "probability": 0.8,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Export of new virions",
+            "inputs": [
+              {
+                "entity": "Immature virion",
+                "count": 1,
+                "consumed": true
+              },
+              {
+                "entity": "surface proteins (membrane)",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "exported virion",
+                "count": 1
+              }
+            ],
+            "probability": 0.75,
+            "rule_type": "per_entity",
+            "interferon_amount": 0.01
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Reinfection cycle",
+            "inputs": [
+              {
+                "entity": "exported virion",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "enveloped virion",
+                "count": 1
+              }
+            ],
+            "probability": 1.0,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Transport of surface proteins to membrane",
+            "inputs": [
+              {
+                "entity": "viral proteins in ER",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "surface proteins (membrane)",
+                "count": 1
+              }
+            ],
+            "probability": 0.7,
+            "rule_type": "per_entity"
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "RSV - L polymerase": {
+      "name": "RSV - L polymerase",
+      "cost": 45,
+      "description": "The RSV RNA dep RNA-polymerase. Requires a co-factor in order to work. In nature, this is P protein.",
+      "effects": [
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Mononeg RdRp activity (pos strand)",
+            "inputs": [
+              {
+                "entity": "negative-sense ssRNA",
+                "count": 1,
+                "consumed": false
+              },
+              {
+                "entity": "RNA-dep RNA-polymerase",
+                "count": 1,
+                "consumed": false
+              },
+              {
+                "entity": "Replication co-factors",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "positive-sense ssRNA",
+                "count": 1
+              }
+            ],
+            "probability": 0.8,
+            "rule_type": "per_entity",
+            "interferon_amount": 0.01
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Mononeg RdRp activity (neg strand)",
+            "inputs": [
+              {
+                "entity": "positive-sense ssRNA",
+                "count": 1,
+                "consumed": false
+              },
+              {
+                "entity": "RNA-dep RNA-polymerase",
+                "count": 1,
+                "consumed": false
+              },
+              {
+                "entity": "Replication co-factors",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "negative-sense ssRNA",
+                "count": 1
+              }
+            ],
+            "probability": 0.8,
+            "rule_type": "per_entity",
+            "interferon_amount": 0.01
+          }
+        }
+      ],
+      "is_polymerase": true
+    },
+    "RSV - P protein": {
+      "name": "RSV - P protein",
+      "cost": 15,
+      "description": "RSV co-factor for the L Polymerase. Forms the polymerase complex",
+      "effects": [
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Transcription of co-factor",
+            "inputs": [
+              {
+                "entity": "positive-sense ssRNA",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "Replication co-factors",
+                "count": 1
+              }
+            ],
+            "probability": 0.75,
+            "rule_type": "per_entity"
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "RSV - N protein": {
+      "name": "RSV - N protein",
+      "cost": 25,
+      "description": "The RSV nucleocapsid. Unpacks and packs negative sense RNA, a polymerase and co-factor",
+      "effects": [
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Unpacking in cytoplasm",
+            "inputs": [
+              {
+                "entity": "Viral genome complex",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "negative-sense ssRNA",
+                "count": 1
+              },
+              {
+                "entity": "RNA-dep RNA-polymerase",
+                "count": 1
+              },
+              {
+                "entity": "Replication co-factors",
+                "count": 1
+              }
+            ],
+            "probability": 0.75,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "M mediated virion assembly",
+            "inputs": [
+              {
+                "entity": "negative-sense ssRNA",
+                "count": 1,
+                "consumed": true
+              },
+              {
+                "entity": "RNA-dep RNA-polymerase",
+                "count": 1,
+                "consumed": true
+              },
+              {
+                "entity": "structural proteins",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "Immature virion",
+                "count": 1
+              }
+            ],
+            "probability": 0.4,
+            "rule_type": "per_entity"
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "RSV - backbone": {
+      "name": "RSV - backbone",
+      "cost": 50,
+      "description": "",
+      "effects": [
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Translation of viral RNA",
+            "inputs": [
+              {
+                "entity": "positive-sense ssRNA",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "RNA-dep RNA-polymerase",
+                "count": 1
+              },
+              {
+                "entity": "structural proteins",
+                "count": 1
+              }
+            ],
+            "probability": 0.6,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Translation of viral RNA for ER",
+            "inputs": [
+              {
+                "entity": "positive-sense ssRNA",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "viral proteins in ER",
+                "count": 1
+              }
+            ],
+            "probability": 0.6,
+            "rule_type": "per_entity"
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "CoV - nsp7 nsp8": {
+      "name": "CoV - nsp7 nsp8",
+      "cost": 10,
+      "description": "Polymerase co-factors that boost RdRp activity for replication and sub-genomic RNA production.",
+      "effects": [
+        {
+          "type": "modify_transition",
+          "rule_name": "Picorna-like RdRp activity (neg strand)",
+          "modification": {
+            "probability_multiplier": 1.5,
+            "interferon_multiplier": 1.2
+          }
+        },
+        {
+          "type": "modify_transition",
+          "rule_name": "Picorna-like RdRp activity (pos strand)",
+          "modification": {
+            "probability_multiplier": 1.5,
+            "interferon_multiplier": 1.2
+          }
+        },
+        {
+          "type": "modify_transition",
+          "rule_name": "Picorna-like RdRp synthesis of sub-genomic RNA",
+          "modification": {
+            "probability_multiplier": 1.5,
+            "interferon_multiplier": 1.2
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "RSV - M2 protein": {
+      "name": "RSV - M2 protein",
+      "cost": 10,
+      "description": "Improves function of the L polymerases",
+      "effects": [
+        {
+          "type": "modify_transition",
+          "rule_name": "Mononeg RdRp activity (pos strand)",
+          "modification": {
+            "probability_multiplier": 1.5
+          }
+        },
+        {
+          "type": "modify_transition",
+          "rule_name": "Mononeg RdRp activity (neg strand)",
+          "modification": {
+            "probability_multiplier": 1.5
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "BUNV - Gn Gc glycoproteins": {
+      "name": "BUNV - Gn Gc glycoproteins",
+      "cost": 20,
+      "description": "Mediate binding to the membrane and endocytosis. Gc is a fusion protein which mediates fusion upon acidification.",
+      "effects": [
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Binding to membrane",
+            "inputs": [
+              {
+                "entity": "enveloped virion",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "virion bound to membrane",
+                "count": 1
+              }
+            ],
+            "probability": 0.4,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Gc mediated fusion",
+            "inputs": [
+              {
+                "entity": "virion in endosome",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "Viral genome complex",
+                "count": 1
+              }
+            ],
+            "probability": 0.75,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Export of new virions",
+            "inputs": [
+              {
+                "entity": "Immature virion",
+                "count": 1,
+                "consumed": true
+              },
+              {
+                "entity": "viral proteins in ER",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "exported virion",
+                "count": 1
+              }
+            ],
+            "probability": 0.6,
+            "rule_type": "per_entity",
+            "interferon_amount": 0.01
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Reinfection cycle",
+            "inputs": [
+              {
+                "entity": "exported virion",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "enveloped virion",
+                "count": 1
+              }
+            ],
+            "probability": 1.0,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Gc mediated endocytosis",
+            "inputs": [
+              {
+                "entity": "virion bound to membrane",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "virion in endosome",
+                "count": 1
+              }
+            ],
+            "probability": 0.8,
+            "rule_type": "per_entity"
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "BUNV - N protein": {
+      "name": "BUNV - N protein",
+      "cost": 25,
+      "description": "Nucleocapsid of Orthobunyavirus. Encapsidates the three negative sense RNA genome segments, each bound to a polymerase",
+      "effects": [
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Unpacking in cytoplasm",
+            "inputs": [
+              {
+                "entity": "Viral genome complex",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "RNA-dep RNA-polymerase",
+                "count": 3
+              },
+              {
+                "entity": "negative-sense ssRNA",
+                "count": 3
+              }
+            ],
+            "probability": 0.7,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Assembly of new virions",
+            "inputs": [
+              {
+                "entity": "negative-sense ssRNA",
+                "count": 3,
+                "consumed": true
+              },
+              {
+                "entity": "RNA-dep RNA-polymerase",
+                "count": 3,
+                "consumed": true
+              },
+              {
+                "entity": "structural proteins",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "Immature virion",
+                "count": 1
+              }
+            ],
+            "probability": 0.33,
+            "rule_type": "per_entity"
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "BUNV - backbone": {
+      "name": "BUNV - backbone",
+      "cost": 45,
+      "description": "Segmented negative-sense RNA genome with complementary termini. Enables translation of viral proteins in the cytoplasm.",
+      "effects": [
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Translation of viral RNA",
+            "inputs": [
+              {
+                "entity": "positive-sense ssRNA",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "RNA-dep RNA-polymerase",
+                "count": 1
+              },
+              {
+                "entity": "structural proteins",
+                "count": 1
+              }
+            ],
+            "probability": 0.6,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Translation of viral RNA for ER",
+            "inputs": [
+              {
+                "entity": "positive-sense ssRNA",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "viral proteins in ER",
+                "count": 1
+              }
+            ],
+            "probability": 0.6,
+            "rule_type": "per_entity"
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "MeV - Truncated M gene": {
+      "name": "MeV - Truncated M gene",
+      "cost": 15,
+      "description": "Hypermutated M gene prevents formation of new virions",
+      "effects": [
+        {
+          "type": "modify_transition",
+          "rule_name": "M mediated virion assembly",
+          "modification": {
+            "probability_multiplier": 0.0
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "HEV - ORF2": {
+      "name": "HEV - ORF2",
+      "cost": 35,
+      "description": "Capsid protein",
+      "effects": [
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "ORF2 mediated endocytosis",
+            "inputs": [
+              {
+                "entity": "virion bound to membrane",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "virion in endosome",
+                "count": 1
+              }
+            ],
+            "probability": 0.75,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "ORF2 mediated entry and unpacking",
+            "inputs": [
+              {
+                "entity": "virion in endosome",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "positive-sense ssRNA",
+                "count": 1
+              }
+            ],
+            "probability": 0.66,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Assembly of new virions",
+            "inputs": [
+              {
+                "entity": "positive-sense ssRNA",
+                "count": 1,
+                "consumed": true
+              },
+              {
+                "entity": "viral proteins in ER",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "Immature virion",
+                "count": 1
+              }
+            ],
+            "probability": 0.3,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Export of new virions",
+            "inputs": [
+              {
+                "entity": "Immature virion",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "exported virion",
+                "count": 1
+              }
+            ],
+            "probability": 0.2,
+            "rule_type": "per_entity",
+            "interferon_amount": 0.01
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Reinfection cycle",
+            "inputs": [
+              {
+                "entity": "exported virion",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "enveloped virion",
+                "count": 1
+              }
+            ],
+            "probability": 1.0,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Loss of quasi membrane",
+            "inputs": [
+              {
+                "entity": "enveloped virion",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "unenveloped virion",
+                "count": 1
+              }
+            ],
+            "probability": 0.67,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Lytic release of virions",
+            "inputs": [
+              {
+                "entity": "Immature virion",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "unenveloped virion",
+                "count": 1
+              }
+            ],
+            "probability": 0.5,
+            "rule_type": "per_entity",
+            "interferon_amount": 0.05
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Binding to membrane",
+            "inputs": [
+              {
+                "entity": "unenveloped virion",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "virion bound to membrane",
+                "count": 1
+              }
+            ],
+            "probability": 0.35,
+            "rule_type": "per_entity"
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "HEV - ORF1": {
+      "name": "HEV - ORF1",
+      "cost": 50,
+      "description": "Polyprotein containing protease and RNA dep RNA Polymerase. Has residual RNA synthesis as polyproteins",
+      "effects": [
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Polyprotein cleavage",
+            "inputs": [
+              {
+                "entity": "Polyprotein",
+                "count": 1,
+                "consumed": true
+              },
+              {
+                "entity": "Protease",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "RNA-dep RNA-polymerase",
+                "count": 1
+              }
+            ],
+            "probability": 0.2,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Picorna-like RdRp activity (neg strand)",
+            "inputs": [
+              {
+                "entity": "RNA-dep RNA-polymerase",
+                "count": 1,
+                "consumed": false
+              },
+              {
+                "entity": "positive-sense ssRNA",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "negative-sense ssRNA",
+                "count": 1
+              }
+            ],
+            "probability": 0.8,
+            "rule_type": "per_entity",
+            "interferon_amount": 0.01
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Picorna-like RdRp activity (pos strand)",
+            "inputs": [
+              {
+                "entity": "negative-sense ssRNA",
+                "count": 1,
+                "consumed": false
+              },
+              {
+                "entity": "RNA-dep RNA-polymerase",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "positive-sense ssRNA",
+                "count": 1
+              }
+            ],
+            "probability": 0.8,
+            "rule_type": "per_entity",
+            "interferon_amount": 0.01
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Picorna-like RdRp synthesis of sub-genomic RNA",
+            "inputs": [
+              {
+                "entity": "negative-sense ssRNA",
+                "count": 1,
+                "consumed": false
+              },
+              {
+                "entity": "RNA-dep RNA-polymerase",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "sub-genomic RNA",
+                "count": 1
+              }
+            ],
+            "probability": 0.7,
+            "rule_type": "per_entity",
+            "interferon_amount": 0.01
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "uncleaved ORF1 activity (neg strand)",
+            "inputs": [
+              {
+                "entity": "Polyprotein",
+                "count": 1,
+                "consumed": false
+              },
+              {
+                "entity": "positive-sense ssRNA",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "negative-sense ssRNA",
+                "count": 1
+              }
+            ],
+            "probability": 0.15,
+            "rule_type": "per_entity",
+            "interferon_amount": 0.02
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "uncleaved ORF1 activity (pos strand)",
+            "inputs": [
+              {
+                "entity": "negative-sense ssRNA",
+                "count": 1,
+                "consumed": false
+              },
+              {
+                "entity": "Polyprotein",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "positive-sense ssRNA",
+                "count": 1
+              }
+            ],
+            "probability": 0.15,
+            "rule_type": "per_entity",
+            "interferon_amount": 0.02
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "uncleaved ORF1 activity (sub genomic)",
+            "inputs": [
+              {
+                "entity": "negative-sense ssRNA",
+                "count": 1,
+                "consumed": false
+              },
+              {
+                "entity": "Polyprotein",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "sub-genomic RNA",
+                "count": 1
+              }
+            ],
+            "probability": 0.2,
+            "rule_type": "per_entity",
+            "interferon_amount": 0.02
+          }
+        }
+      ],
+      "is_polymerase": true
+    },
+    "X - Uncleaved RNA synthesis": {
+      "name": "X - Uncleaved RNA synthesis",
+      "cost": 20,
+      "description": "",
+      "effects": [
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Residual RNA synthesis (pos strand)",
+            "inputs": [
+              {
+                "entity": "Polyprotein",
+                "count": 1,
+                "consumed": false
+              },
+              {
+                "entity": "negative-sense ssRNA",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "positive-sense ssRNA",
+                "count": 1
+              }
+            ],
+            "probability": 0.5,
+            "rule_type": "per_entity",
+            "interferon_amount": 0.01
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Residual RNA synthesis (neg strand)",
+            "inputs": [
+              {
+                "entity": "Polyprotein",
+                "count": 1,
+                "consumed": false
+              },
+              {
+                "entity": "positive-sense ssRNA",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "negative-sense ssRNA",
+                "count": 1
+              }
+            ],
+            "probability": 0.5,
+            "rule_type": "per_entity",
+            "interferon_amount": 0.01
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "HEV - backbone": {
+      "name": "HEV - backbone",
+      "cost": 40,
+      "description": "HEV genomic backbone.",
+      "effects": [
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Translation of viral RNA",
+            "inputs": [
+              {
+                "entity": "positive-sense ssRNA",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "Polyprotein",
+                "count": 1
+              },
+              {
+                "entity": "Protease",
+                "count": 1
+              }
+            ],
+            "probability": 0.6,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Translation of sub genomic RNA",
+            "inputs": [
+              {
+                "entity": "sub-genomic RNA",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "viral proteins in ER",
+                "count": 1
+              }
+            ],
+            "probability": 0.6,
+            "rule_type": "per_entity"
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "HEV - ORF3": {
+      "name": "HEV - ORF3",
+      "cost": 20,
+      "description": "Required for efficient export of HEV",
+      "effects": [
+        {
+          "type": "modify_transition",
+          "rule_name": "Export of new virions",
+          "modification": {
+            "probability_multiplier": 2.0
+          }
+        },
+        {
+          "type": "modify_transition",
+          "rule_name": "Lytic release of virions",
+          "modification": {
+            "probability_multiplier": 0.0
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "ADV - fiber protein": {
+      "name": "ADV - fiber protein",
+      "cost": 15,
+      "description": "Trimeric fiber that binds cell receptors. Enables binding to membrane and converts unenveloped virion to virion bound to membrane.",
+      "effects": [
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Binding to membrane",
+            "inputs": [
+              {
+                "entity": "unenveloped virion",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "virion bound to membrane",
+                "count": 1
+              }
+            ],
+            "probability": 0.45,
+            "rule_type": "per_entity"
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "ADV - hexon and penton base": {
+      "name": "ADV - hexon and penton base",
+      "cost": 20,
+      "description": "Major capsid proteins and penton base trigger endocytosis and uncoating. Adds penton mediated endocytosis, endosomal escape, nuclear transport, structural protein import, virion assembly, and lytic release that increases interferon.",
+      "effects": [
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Penton mediated endocytosis",
+            "inputs": [
+              {
+                "entity": "virion bound to membrane",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "virion in endosome",
+                "count": 1
+              }
+            ],
+            "probability": 0.8,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Endosomal escape",
+            "inputs": [
+              {
+                "entity": "virion in endosome",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "Viral genome complex",
+                "count": 1
+              }
+            ],
+            "probability": 0.75,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Transport and release into nucleus",
+            "inputs": [
+              {
+                "entity": "Viral genome complex",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "dsDNA in nucleus",
+                "count": 1
+              },
+              {
+                "entity": "Replication co-factors (nucleus)",
+                "count": 1
+              }
+            ],
+            "probability": 0.66,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Import of structural proteins",
+            "inputs": [
+              {
+                "entity": "structural proteins",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "structural proteins in nucleus",
+                "count": 1
+              }
+            ],
+            "probability": 0.8,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Assembly of new virions",
+            "inputs": [
+              {
+                "entity": "dsDNA in nucleus",
+                "count": 1,
+                "consumed": true
+              },
+              {
+                "entity": "Replication co-factors (nucleus)",
+                "count": 1,
+                "consumed": true
+              },
+              {
+                "entity": "structural proteins in nucleus",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "Immature virion",
+                "count": 1
+              }
+            ],
+            "probability": 0.3,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Lytic release",
+            "inputs": [
+              {
+                "entity": "Immature virion",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "exported virion",
+                "count": 1
+              }
+            ],
+            "probability": 0.33,
+            "rule_type": "per_entity",
+            "interferon_amount": 0.05
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Reinfection cycle",
+            "inputs": [
+              {
+                "entity": "exported virion",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "unenveloped virion",
+                "count": 1
+              }
+            ],
+            "probability": 1.0,
+            "rule_type": "per_entity"
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "ADV - backbone": {
+      "name": "ADV - backbone",
+      "cost": 40,
+      "description": "Double stranded DNA genome expressed by host RNA polymerase II with splicing. Enables transcription of viral DNA, export of viral mRNA, and translation into DNA polymerase and structural proteins.",
+      "effects": [
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Transcription of viral DNA",
+            "inputs": [
+              {
+                "entity": "dsDNA in nucleus",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "spliced mRNA in nucleus",
+                "count": 1
+              }
+            ],
+            "probability": 0.35,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Export of viral mRNA",
+            "inputs": [
+              {
+                "entity": "spliced mRNA in nucleus",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "positive-sense ssRNA",
+                "count": 1
+              }
+            ],
+            "probability": 0.75,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Translation of viral mRNA",
+            "inputs": [
+              {
+                "entity": "positive-sense ssRNA",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "DNA-Polymerase",
+                "count": 1
+              },
+              {
+                "entity": "structural proteins",
+                "count": 1
+              }
+            ],
+            "probability": 0.6,
+            "rule_type": "per_entity"
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "ADV - E2 polymerase": {
+      "name": "ADV - E2 polymerase",
+      "cost": 45,
+      "description": "Encodes viral DNA polymerase and replication proteins. Imports DNA polymerase into nucleus and enables DNA polymerase activity to replicate dsDNA in nucleus.",
+      "effects": [
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Import polymerase into nucleus",
+            "inputs": [
+              {
+                "entity": "DNA-Polymerase",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "DNA-Polymerase (nucleus)",
+                "count": 1
+              }
+            ],
+            "probability": 0.8,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "DNA pol acitivity in nucleus",
+            "inputs": [
+              {
+                "entity": "dsDNA in nucleus",
+                "count": 1,
+                "consumed": false
+              },
+              {
+                "entity": "Replication co-factors (nucleus)",
+                "count": 1,
+                "consumed": false
+              },
+              {
+                "entity": "DNA-Polymerase (nucleus)",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "dsDNA in nucleus",
+                "count": 1
+              }
+            ],
+            "probability": 0.25,
+            "rule_type": "per_entity"
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "ADV - terminal protein": {
+      "name": "ADV - terminal protein",
+      "cost": 20,
+      "description": "Protein that primes adenoviral DNA synthesis and recruits factors. Translates replication co-factors in cytoplasm and imports them into nucleus to support DNA replication and assembly.",
+      "effects": [
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Import of co factors into nucleus",
+            "inputs": [
+              {
+                "entity": "Replication co-factors",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "Replication co-factors (nucleus)",
+                "count": 1
+              }
+            ],
+            "probability": 0.8,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Translation of co factors",
+            "inputs": [
+              {
+                "entity": "positive-sense ssRNA",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "Replication co-factors",
+                "count": 1
+              }
+            ],
+            "probability": 0.7,
+            "rule_type": "per_entity"
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "X - mRNA translation enhancer": {
+      "name": "X - mRNA translation enhancer",
+      "cost": 15,
+      "description": "",
+      "effects": [
+        {
+          "type": "modify_transition",
+          "rule_name": "Translation of viral mRNA",
+          "modification": {
+            "probability_multiplier": 1.5
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "ENV - 2A Protease": {
+      "name": "ENV - 2A Protease",
+      "cost": 15,
+      "description": "Cleaves host translation factor eIF4G shuts off cap-dependent host protein synthesis. Reduces translation but also Interferon signaling",
+      "effects": [
+        {
+          "type": "modify_transition",
+          "rule_name": "Translation of viral RNA",
+          "modification": {
+            "probability_multiplier": 0.8
+          }
+        },
+        {
+          "type": "modify_transition",
+          "rule_name": "Picorna-like RdRp activity (neg strand)",
+          "modification": {
+            "interferon_multiplier": 0.4
+          }
+        },
+        {
+          "type": "modify_transition",
+          "rule_name": "Picorna-like RdRp activity (pos strand)",
+          "modification": {
+            "interferon_multiplier": 0.4
+          }
+        },
+        {
+          "type": "modify_transition",
+          "rule_name": "uncapped RNA synthesis (neg strand)",
+          "modification": {
+            "interferon_multiplier": 0.4
+          }
+        },
+        {
+          "type": "modify_transition",
+          "rule_name": "uncapped RNA synthesis (pos strand)",
+          "modification": {
+            "interferon_multiplier": 0.4
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "X - Protease enhancer": {
+      "name": "X - Protease enhancer",
+      "cost": 15,
+      "description": "",
+      "effects": [
+        {
+          "type": "modify_transition",
+          "rule_name": "Polyprotein cleavage",
+          "modification": {
+            "probability_multiplier": 2.0
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "HEV - ORF1 MTase domain": {
+      "name": "HEV - ORF1 MTase domain",
+      "cost": 15,
+      "description": "",
+      "effects": [
+        {
+          "type": "modify_transition",
+          "rule_name": "Picorna-like RdRp activity (pos strand)",
+          "modification": {
+            "probability_multiplier": 0.8,
+            "interferon_multiplier": 0.2
+          }
+        },
+        {
+          "type": "modify_transition",
+          "rule_name": "Picorna-like RdRp synthesis of sub-genomic RNA",
+          "modification": {
+            "probability_multiplier": 0.8,
+            "interferon_multiplier": 0.2
+          }
+        },
+        {
+          "type": "modify_transition",
+          "rule_name": "uncleaved ORF1 activity (pos strand)",
+          "modification": {
+            "probability_multiplier": 0.8,
+            "interferon_multiplier": 0.2
+          }
+        },
+        {
+          "type": "modify_transition",
+          "rule_name": "uncleaved ORF1 activity (sub genomic)",
+          "modification": {
+            "probability_multiplier": 0.8,
+            "interferon_multiplier": 0.2
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "BUNV - Seg clade L polymerase": {
+      "name": "BUNV - Seg clade L polymerase",
+      "cost": 50,
+      "description": "",
+      "effects": [
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Seg-type RdRp activity (pos strand)",
+            "inputs": [
+              {
+                "entity": "RNA-dep RNA-polymerase",
+                "count": 1,
+                "consumed": false
+              },
+              {
+                "entity": "negative-sense ssRNA",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "positive-sense ssRNA",
+                "count": 1
+              }
+            ],
+            "probability": 0.75,
+            "rule_type": "per_entity",
+            "interferon_amount": 0.01
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Seg-type RdRp activity (neg strand)",
+            "inputs": [
+              {
+                "entity": "RNA-dep RNA-polymerase",
+                "count": 1,
+                "consumed": false
+              },
+              {
+                "entity": "positive-sense ssRNA",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "negative-sense ssRNA",
+                "count": 1
+              }
+            ],
+            "probability": 0.75,
+            "rule_type": "per_entity",
+            "interferon_amount": 0.01
+          }
+        }
+      ],
+      "is_polymerase": true
+    },
+    "ADV - E1A small regulatory protein": {
+      "name": "ADV - E1A small regulatory protein",
+      "cost": 15,
+      "description": "Early regulatory protein that drives cell into S-phase and boosts viral transcription. Passively increases efficiency of nuclear DNA replication.",
+      "effects": [
+        {
+          "type": "modify_transition",
+          "rule_name": "co-factor enabled replication of circular DNA",
+          "modification": {
+            "probability_multiplier": 1.25
+          }
+        },
+        {
+          "type": "modify_transition",
+          "rule_name": "DNA pol acitivity in nucleus",
+          "modification": {
+            "probability_multiplier": 2.0
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "X - Residual RdRp activity": {
+      "name": "X - Residual RdRp activity",
+      "cost": 25,
+      "description": "",
+      "effects": [
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Residual RdRp activity (pos strand)",
+            "inputs": [
+              {
+                "entity": "negative-sense ssRNA",
+                "count": 1,
+                "consumed": false
+              },
+              {
+                "entity": "RNA-dep RNA-polymerase",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "positive-sense ssRNA",
+                "count": 1
+              }
+            ],
+            "probability": 0.33,
+            "rule_type": "per_entity",
+            "interferon_amount": 0.01
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Residual RdRp activity (neg strand)",
+            "inputs": [
+              {
+                "entity": "RNA-dep RNA-polymerase",
+                "count": 1,
+                "consumed": false
+              },
+              {
+                "entity": "positive-sense ssRNA",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "negative-sense ssRNA",
+                "count": 1
+              }
+            ],
+            "probability": 0.33,
+            "rule_type": "per_entity",
+            "interferon_amount": 0.01
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "CHKV - E1 E2 glycoprotein": {
+      "name": "CHKV - E1 E2 glycoprotein",
+      "cost": 15,
+      "description": "Mediates endocytosis, membrane fusion from endosomes, transport of glycoproteins to the membrane, and export of new virions.",
+      "effects": [
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Endocytosis",
+            "inputs": [
+              {
+                "entity": "virion bound to membrane",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "virion in endosome",
+                "count": 1
+              }
+            ],
+            "probability": 0.75,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Membrane fusion",
+            "inputs": [
+              {
+                "entity": "virion in endosome",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "Viral genome complex",
+                "count": 1
+              }
+            ],
+            "probability": 0.7,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Export of new virions",
+            "inputs": [
+              {
+                "entity": "Immature virion",
+                "count": 1,
+                "consumed": true
+              },
+              {
+                "entity": "surface proteins (membrane)",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "exported virion",
+                "count": 1
+              }
+            ],
+            "probability": 0.66,
+            "rule_type": "per_entity",
+            "interferon_amount": 0.01
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Transport of gp to membrane",
+            "inputs": [
+              {
+                "entity": "viral proteins in ER",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "surface proteins (membrane)",
+                "count": 1
+              }
+            ],
+            "probability": 0.75,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Reinfection cycle",
+            "inputs": [
+              {
+                "entity": "exported virion",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "enveloped virion",
+                "count": 1
+              }
+            ],
+            "probability": 1.0,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Binding to membrane",
+            "inputs": [
+              {
+                "entity": "enveloped virion",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "virion bound to membrane",
+                "count": 1
+              }
+            ],
+            "probability": 0.4,
+            "rule_type": "per_entity"
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "CHKV - capsid protein": {
+      "name": "CHKV - capsid protein",
+      "cost": 20,
+      "description": "Unpacks the viral genome complex into positive-sense RNA and drives assembly of new virions when RNA and structural proteins are present.",
+      "effects": [
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Unpacking in cytoplasm",
+            "inputs": [
+              {
+                "entity": "Viral genome complex",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "positive-sense ssRNA",
+                "count": 1
+              }
+            ],
+            "probability": 0.8,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Assembly of new virions",
+            "inputs": [
+              {
+                "entity": "positive-sense ssRNA",
+                "count": 1,
+                "consumed": true
+              },
+              {
+                "entity": "structural proteins",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "Immature virion",
+                "count": 1
+              }
+            ],
+            "probability": 0.3,
+            "rule_type": "per_entity"
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "CHKV - backbone": {
+      "name": "CHKV - backbone",
+      "cost": 60,
+      "description": "Translates viral RNA into polyprotein and protease, and translates sub-genomic RNA into structural proteins and ER-targeted proteins.",
+      "effects": [
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Translation of viral RNA",
+            "inputs": [
+              {
+                "entity": "positive-sense ssRNA",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "Polyprotein",
+                "count": 1
+              },
+              {
+                "entity": "Protease",
+                "count": 1
+              }
+            ],
+            "probability": 0.6,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Translation of sub genomic RNA",
+            "inputs": [
+              {
+                "entity": "sub-genomic RNA",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "structural proteins",
+                "count": 1
+              },
+              {
+                "entity": "viral proteins in ER",
+                "count": 1
+              }
+            ],
+            "probability": 0.6,
+            "rule_type": "per_entity"
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "CHKV - nsP4 RdRp": {
+      "name": "CHKV - nsP4 RdRp",
+      "cost": 40,
+      "description": "RNA-dependent RNA polymerase that synthesizes negative-strand RNA, replicates positive strands, and generates sub-genomic RNA for structural protein expression.",
+      "effects": [
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Picorna-like RdRp activity (neg strand)",
+            "inputs": [
+              {
+                "entity": "positive-sense ssRNA",
+                "count": 1,
+                "consumed": false
+              },
+              {
+                "entity": "RNA-dep RNA-polymerase",
+                "count": 1,
+                "consumed": false
+              },
+              {
+                "entity": "Replication co-factors",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "negative-sense ssRNA",
+                "count": 1
+              }
+            ],
+            "probability": 0.5,
+            "rule_type": "per_entity",
+            "interferon_amount": 0.01
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Picorna-like RdRp activity (pos strand)",
+            "inputs": [
+              {
+                "entity": "negative-sense ssRNA",
+                "count": 1,
+                "consumed": false
+              },
+              {
+                "entity": "RNA-dep RNA-polymerase",
+                "count": 1,
+                "consumed": false
+              },
+              {
+                "entity": "Replication co-factors",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "positive-sense ssRNA",
+                "count": 1
+              }
+            ],
+            "probability": 0.5,
+            "rule_type": "per_entity",
+            "interferon_amount": 0.01
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Picorna-like RdRp synthesis of sub-genomic RNA",
+            "inputs": [
+              {
+                "entity": "negative-sense ssRNA",
+                "count": 1,
+                "consumed": false
+              },
+              {
+                "entity": "RNA-dep RNA-polymerase",
+                "count": 1,
+                "consumed": false
+              },
+              {
+                "entity": "Replication co-factors",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "sub-genomic RNA",
+                "count": 1
+              }
+            ],
+            "probability": 0.4,
+            "rule_type": "per_entity",
+            "interferon_amount": 0.01
+          }
+        }
+      ],
+      "is_polymerase": true
+    },
+    "CHKV - nsP2 protease": {
+      "name": "CHKV - nsP2 protease",
+      "cost": 20,
+      "description": "Cleaves the polyprotein into functional proteins including RdRp and replication co-factors, and boosts RdRp activities and sub-genomic RNA synthesis.",
+      "effects": [
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Cleavage of polyprotein",
+            "inputs": [
+              {
+                "entity": "Polyprotein",
+                "count": 1,
+                "consumed": true
+              },
+              {
+                "entity": "Protease",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "RNA-dep RNA-polymerase",
+                "count": 1
+              },
+              {
+                "entity": "Replication co-factors",
+                "count": 1
+              }
+            ],
+            "probability": 0.7,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "modify_transition",
+          "rule_name": "Picorna-like RdRp synthesis of sub-genomic RNA",
+          "modification": {
+            "probability_multiplier": 1.5,
+            "interferon_multiplier": 0.75
+          }
+        },
+        {
+          "type": "modify_transition",
+          "rule_name": "Picorna-like RdRp activity (neg strand)",
+          "modification": {
+            "probability_multiplier": 1.2,
+            "interferon_multiplier": 0.75
+          }
+        },
+        {
+          "type": "modify_transition",
+          "rule_name": "Picorna-like RdRp activity (pos strand)",
+          "modification": {
+            "probability_multiplier": 1.2,
+            "interferon_multiplier": 0.75
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "CHKV - nsP1 co-factor": {
+      "name": "CHKV - nsP1 co-factor",
+      "cost": 15,
+      "description": "Replication co-factor that enhances RdRp efficiency for both genome replication and sub-genomic RNA synthesis.",
+      "effects": [
+        {
+          "type": "modify_transition",
+          "rule_name": "Picorna-like RdRp activity (neg strand)",
+          "modification": {
+            "probability_multiplier": 1.5
+          }
+        },
+        {
+          "type": "modify_transition",
+          "rule_name": "Picorna-like RdRp activity (pos strand)",
+          "modification": {
+            "probability_multiplier": 1.5
+          }
+        },
+        {
+          "type": "modify_transition",
+          "rule_name": "Picorna-like RdRp synthesis of sub-genomic RNA",
+          "modification": {
+            "probability_multiplier": 1.5
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "BoDV - glycoprotein G": {
+      "name": "BoDV - glycoprotein G",
+      "cost": 20,
+      "description": "Mediates endocytosis and fusion from endosomes. Also enables export of assembled virions, transport of ER proteins to the membrane, and rebinding for reinfection.",
+      "effects": [
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "G mediated endocytosis",
+            "inputs": [
+              {
+                "entity": "virion bound to membrane",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "virion in endosome",
+                "count": 1
+              }
+            ],
+            "probability": 0.75,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Membrane fusion",
+            "inputs": [
+              {
+                "entity": "virion in endosome",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "Viral genome complex",
+                "count": 1
+              }
+            ],
+            "probability": 0.8,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Export of new virions",
+            "inputs": [
+              {
+                "entity": "Immature virion",
+                "count": 1,
+                "consumed": true
+              },
+              {
+                "entity": "surface proteins (membrane)",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "exported virion",
+                "count": 1
+              }
+            ],
+            "probability": 0.75,
+            "rule_type": "per_entity",
+            "interferon_amount": 0.01
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Reinfection cycle",
+            "inputs": [
+              {
+                "entity": "exported virion",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "enveloped virion",
+                "count": 1
+              }
+            ],
+            "probability": 1.0,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Transport of ER proteins to membrane",
+            "inputs": [
+              {
+                "entity": "viral proteins in ER",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "surface proteins (membrane)",
+                "count": 1
+              }
+            ],
+            "probability": 0.75,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Binding to membrane",
+            "inputs": [
+              {
+                "entity": "enveloped virion",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "virion bound to membrane",
+                "count": 1
+              }
+            ],
+            "probability": 0.35,
+            "rule_type": "per_entity"
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "BoDV - N protein": {
+      "name": "BoDV - N protein",
+      "cost": 15,
+      "description": "Imports viral genome complex into the nucleus and unpacks it to produce negative-sense RNA, nuclear polymerase, and co-factors. Also drives assembly of new virions when RNA and structural proteins are present.",
+      "effects": [
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Import through nuclear pore complex",
+            "inputs": [
+              {
+                "entity": "Viral genome complex",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "Viral genome complex (nucleus)",
+                "count": 1
+              }
+            ],
+            "probability": 0.8,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Unpacking in nucleus",
+            "inputs": [
+              {
+                "entity": "Viral genome complex (nucleus)",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "negative-sense ssRNA (nucleus)",
+                "count": 1
+              },
+              {
+                "entity": "RNA-dep RNA-polymerase (nucleus)",
+                "count": 1
+              },
+              {
+                "entity": "Replication co-factors (nucleus)",
+                "count": 1
+              }
+            ],
+            "probability": 0.75,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Assembly of new virions",
+            "inputs": [
+              {
+                "entity": "negative-sense ssRNA (nucleus)",
+                "count": 1,
+                "consumed": true
+              },
+              {
+                "entity": "structural proteins in nucleus",
+                "count": 1,
+                "consumed": true
+              },
+              {
+                "entity": "RNA-dep RNA-polymerase (nucleus)",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "Immature virion",
+                "count": 1
+              }
+            ],
+            "probability": 0.33,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Import of structural protein into nucleus",
+            "inputs": [
+              {
+                "entity": "structural proteins",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "structural proteins in nucleus",
+                "count": 1
+              }
+            ],
+            "probability": 0.8,
+            "rule_type": "per_entity"
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "BoDV - L polymerase": {
+      "name": "BoDV - L polymerase",
+      "cost": 50,
+      "description": "Transports RNA-dependent RNA polymerase into the nucleus. Performs mononegative RNA transcription and genome replication and exports positive-sense RNA to cytoplasm.",
+      "effects": [
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Transport of RdRP to nucleus",
+            "inputs": [
+              {
+                "entity": "RNA-dep RNA-polymerase",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "RNA-dep RNA-polymerase (nucleus)",
+                "count": 1
+              }
+            ],
+            "probability": 0.75,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Mononeg RdRp activity (pos strand)",
+            "inputs": [
+              {
+                "entity": "RNA-dep RNA-polymerase (nucleus)",
+                "count": 1,
+                "consumed": false
+              },
+              {
+                "entity": "Replication co-factors (nucleus)",
+                "count": 1,
+                "consumed": false
+              },
+              {
+                "entity": "negative-sense ssRNA (nucleus)",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "positive-sense ssRNA (nucleus)",
+                "count": 1
+              }
+            ],
+            "probability": 0.33,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Mononeg RdRp activity (neg strand)",
+            "inputs": [
+              {
+                "entity": "RNA-dep RNA-polymerase (nucleus)",
+                "count": 1,
+                "consumed": false
+              },
+              {
+                "entity": "Replication co-factors (nucleus)",
+                "count": 1,
+                "consumed": false
+              },
+              {
+                "entity": "positive-sense ssRNA (nucleus)",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "negative-sense ssRNA (nucleus)",
+                "count": 1
+              }
+            ],
+            "probability": 0.33,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Export of modified positive sense RNA",
+            "inputs": [
+              {
+                "entity": "positive-sense ssRNA (nucleus)",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "positive-sense ssRNA",
+                "count": 1
+              }
+            ],
+            "probability": 0.25,
+            "rule_type": "per_entity"
+          }
+        }
+      ],
+      "is_polymerase": true
+    },
+    "BoDV - backbone": {
+      "name": "BoDV - backbone",
+      "cost": 65,
+      "description": "Translates viral RNA to produce polymerase and structural proteins, and generates ER-targeted proteins for surface expression.",
+      "effects": [
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Translation of viral RNA",
+            "inputs": [
+              {
+                "entity": "positive-sense ssRNA",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "RNA-dep RNA-polymerase",
+                "count": 1
+              },
+              {
+                "entity": "structural proteins",
+                "count": 1
+              }
+            ],
+            "probability": 0.6,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Translation of viral RNA for ER",
+            "inputs": [
+              {
+                "entity": "positive-sense ssRNA",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "viral proteins in ER",
+                "count": 1
+              }
+            ],
+            "probability": 0.6,
+            "rule_type": "per_entity"
+          }
+        }
+      ],
+      "is_polymerase": false
+    },
+    "BoDV - P co-factor": {
+      "name": "BoDV - P co-factor",
+      "cost": 15,
+      "description": "Translates replication co-factors and imports them into the nucleus to support L polymerase activity.",
+      "effects": [
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Translation of co-factor",
+            "inputs": [
+              {
+                "entity": "positive-sense ssRNA",
+                "count": 1,
+                "consumed": false
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "Replication co-factors",
+                "count": 1
+              }
+            ],
+            "probability": 0.4,
+            "rule_type": "per_entity"
+          }
+        },
+        {
+          "type": "add_transition",
+          "rule": {
+            "name": "Import of co-factor into nucleus",
+            "inputs": [
+              {
+                "entity": "Replication co-factors",
+                "count": 1,
+                "consumed": true
+              }
+            ],
+            "outputs": [
+              {
+                "entity": "Replication co-factors (nucleus)",
+                "count": 1
+              }
+            ],
+            "probability": 0.8,
+            "rule_type": "per_entity"
+          }
+        }
+      ],
+      "is_polymerase": false
+    }
+  },
+  "milestones": {
+    "Round_1": {
+      "id": "Round_1",
+      "name": "Survive 1 round",
+      "description": "You played the game! (yay)",
+      "type": "survive_turns",
+      "target": 1,
+      "reward_ep": 10
+    },
+    "Round_100": {
+      "id": "Round_100",
+      "name": "Survive 100 rounds",
+      "description": "Something seems to be working...",
+      "type": "survive_turns",
+      "target": 100,
+      "reward_ep": 20
+    },
+    "Round_500": {
+      "id": "Round_500",
+      "name": "Survive 500 rounds",
+      "description": "To infinity and beyond!",
+      "type": "survive_turns",
+      "target": 500,
+      "reward_ep": 10
+    },
+    "Attachment_1": {
+      "id": "Attachment_1",
+      "name": "Attachment and endocytosis",
+      "description": "You bound to the membrane or entered an endosome. Baby steps.",
+      "type": "cumulative_entity_count",
+      "target": 1,
+      "reward_ep": 25,
+      "entity_class": "virion"
+    },
+    "RNA_1": {
+      "id": "RNA_1",
+      "name": "Reach 1 RNA",
+      "description": "You made or unpacked some RNA. The first step to greatness..",
+      "type": "peak_entity_count",
+      "target": 1,
+      "reward_ep": 20,
+      "entity_class": "RNA"
+    },
+    "RNA_10": {
+      "id": "RNA_10",
+      "name": "Reach 10 RNA",
+      "description": "There is some replication going on here.",
+      "type": "peak_entity_count",
+      "target": 10,
+      "reward_ep": 15,
+      "entity_class": "RNA"
+    },
+    "RNA_100": {
+      "id": "RNA_100",
+      "name": "Reach 100 RNA",
+      "description": "Peak RNA suggests you got some serious production going.",
+      "type": "peak_entity_count",
+      "target": 100,
+      "reward_ep": 10,
+      "entity_class": "RNA"
+    },
+    "DNA_1": {
+      "id": "DNA_1",
+      "name": "Reach 1 DNA",
+      "description": "You made or unpacked some DNA. Congratulations.",
+      "type": "peak_entity_count",
+      "target": 1,
+      "reward_ep": 10,
+      "entity_class": "DNA"
+    },
+    "Prot_500": {
+      "id": "Prot_500",
+      "name": "Make 500 protein",
+      "description": "That is a lot of protein!",
+      "type": "cumulative_entity_count",
+      "target": 500,
+      "reward_ep": 10,
+      "entity_class": "protein"
+    },
+    "Prot_50": {
+      "id": "Prot_50",
+      "name": "Make 50 protein",
+      "description": "You made some proteins. You are clearly making progress.",
+      "type": "cumulative_entity_count",
+      "target": 50,
+      "reward_ep": 15,
+      "entity_class": "protein"
+    },
+    "New_virion": {
+      "id": "New_virion",
+      "name": "Make a new virion",
+      "description": "You packaged a new virion. Probably with stuff that you brought in...",
+      "type": "cumulative_entity_count",
+      "target": 1,
+      "reward_ep": 10,
+      "entity_class": "complex"
+    }
+  }
+}
